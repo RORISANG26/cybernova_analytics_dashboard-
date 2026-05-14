@@ -55,7 +55,7 @@ if not st.session_state.logged_in:
 # LOAD DATA
 @st.cache_data
 def load_data():
-    df = pd.read_csv("cybernova_dataset.csv")
+    df = pd.read_csv("cybernova_analytics_dashboard/cybernova_dataset.csv")
     df.columns = df.columns.str.strip().str.lower()
     df["timestamp"] = pd.to_datetime(df["timestamp"])
     return df
